@@ -15,16 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Bjnewsapp.views import Index, Magazine, Business, Sports, Art, Politics, Travel, Contactus
+from Bjnewsapp.views import Index, bbc, Sports, Art, Politics, Travel, Contactus, Times
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Index),
-    path('magazine/',Magazine, name = 'magazine'),
-    path('business/',Business, name = 'business'),
+    path('magazine/',Times, name = 'magazine'),
+    path('business/',bbc, name = 'business'),
     path('sports/',Sports, name = 'sports'),
     path('art/', Art, name='art'),
     path('politics/', Politics, name='politics'),
     path('travel/', Travel, name='travel'),
     path('contactus/', Contactus, name='contactus'),
+    # path('times/', Times, name='time'),
 ]
