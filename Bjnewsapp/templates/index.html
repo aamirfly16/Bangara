@@ -1,4 +1,8 @@
 {% load static %}
+{% load embed_video_tags %}
+
+<!DOCTYPE html>
+
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -65,11 +69,10 @@
               <div class="navbar-bottom">
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a class="navbar-brand" href="{% static '#' %}"
-                       <p><font size="3" face="Times New Roman" color="red">
-                          <a class="nav-link "  href="/">BANGARA JAGATU NEWS</a>
-                         </font>
-                       </p>
+                    <a class="navbar-brand" href="https://www.bangaragatu.com"
+                       <a class="navbar-brand" href="#"
+                      ><img src="{% static '/assets/images/bangara.jpeg' %}" alt=""
+                    /></a>
                   </div>
                   <div>
                     <button
@@ -104,7 +107,7 @@
                           <a class="nav-link" href="/business">Business[BBC]</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="/sports">Sports</a>
+                          <a class="nav-link" href="/sports">Sports[Google]</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="/art">Art</a>
@@ -145,16 +148,75 @@
         </header>
 
         <!-- partial -->
+             <head>
+
+                            <style>
+          body{
+          margin: ;
+          padding: ;
+          font-family: montserrat,sans-serif;
+          background: black;
+          }
+          .animated-text{
+          color: #fff;
+          position: relative;
+          top: 0%;
+          left:39%;
+          transform: translate(-46%,-4%);
+          background: #3920b9;
+          padding: 0 0px;
+          height: 50px;
+          overflow: hidden;
+          }
+          .line{
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 20px;
+          line-height: 60px;
+          }
+          .line:first-child{
+          animation: anim 15s infinite;
+          }
+          @keyframes anim{
+          0%{
+          margin-top: 0;
+          }
+          16%{
+          margin-top: -60px;
+          }
+          33%{
+          margin-top: -120px;
+          }
+          50%{
+          margin-top: -180px;
+          }
+          55%{
+          margin-top: 0px;
+          }
+          66%{
+          margin-top: -60px;
+          }
+          82%{
+          margin-top: -120px;
+          }
+          100%{
+          margin-top: -180;
+          }
+          }
+        </style>
+</head>
+        <body>
         <div class="flash-news-banner">
           <div class="container">
             <div class="d-lg-flex align-items-center justify-content-between">
               <div class="d-flex align-items-center">
                 <span class="badge badge-dark mr-3">Flash news</span>
-                <p class="mb-0">
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s.
-                </p>
+                 <div class="animated-text">
+                  {% for product in products_slider %}
+                  <div class="line">{{product.description}}</div>
+                  {% endfor %}
               </div>
+                </div>
               <div class="d-flex">
                 <span class="mr-3 text-danger">Wed, March 4, 2020</span>
                 <span class="text-danger">30°C,London</span>
@@ -162,34 +224,63 @@
             </div>
           </div>
         </div>
-        <div class="content-wrapper">
-          <div class="container">
-            <div class="row" data-aos="fade-up">
-              <div class="col-xl-8 stretch-card grid-margin">
-                <div class="position-relative">
-                  <img
-                    src="{% static 'assets/images/dashboard/banner.jpg' %}"
-                    alt="banner"
-                    class="img-fluid"
-                  />
-                  <div class="banner-content">
-                    <div class="badge badge-danger fs-12 font-weight-bold mb-3">
-                      global news
-                    </div>
-                    <h1 class="mb-0">GLOBAL PANDEMIC</h1>
-                    <h1 class="mb-2">
-                      Coronavirus Outbreak LIVE Updates: ICSE, CBSE Exams
-                      Postponed, 168 Trains
-                    </h1>
-                    <div class="fs-12">
-                      <span class="mr-2">Photo </span>10 Minutes ago
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 stretch-card grid-margin">
+     <div class="content-wrapper">
+
+
+          <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+      .image-resize{
+      height: 400px;
+      width: 1000px;
+      object-fit: cover;
+        }
+        </style>
+</head>
+<body>
+  <div class="container-fluid mt-3">
+    <div class="row">
+
+              <div class="col-lg-9">
+
+
+<div class="slideshow-container">
+    {% for product in products_slider %}
+<div class="mySlides">
+  <img class="img-responsive image-resize" src="{{product.image.url}}">
+  <div style="text-align:center">{{product.description}}</div>
+</div>
+{% endfor %}
+
+</div>
+<br>
+
+
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 4 seconds
+}
+</script>
+              <div class="col-xl-3 stretch-card grid-margin">
+                            <div class="row" class="col-lg-3">
+
                 <div class="card bg-dark text-white">
                   <div class="card-body">
+
                     <h2>Latest news</h2>
 
                     <div
@@ -249,335 +340,101 @@
                 </div>
               </div>
             </div>
-            <div class="row" data-aos="fade-up">
+                            </div>
+
+
+
+
+</body>
+
+
+</html>
+
+
+       <div class="row" data-aos="fade-up">
               <div class="col-lg-3 stretch-card grid-margin">
                 <div class="card">
                   <div class="card-body">
                     <h2>Category</h2>
                     <ul class="vertical-menu">
-                      <li><a href="#">Politics</a></li>
-                      <li><a href="#">International</a></li>
-                      <li><a href="#">Finance</a></li>
-                      <li><a href="#">Health care</a></li>
-                      <li><a href="#">Technology</a></li>
-                      <li><a href="#">Jobs</a></li>
-                      <li><a href="#">Media</a></li>
-                      <li><a href="#">Administration</a></li>
-                      <li><a href="#">Sports</a></li>
-                      <li><a href="#">Game</a></li>
-                      <li><a href="#">Art</a></li>
-                      <li><a href="#">Kids</a></li>
+                      <li><a href="/test">All News</a></li>
+                    {% for category in categories %}
+                    <ul class="vertical-menu">
+                      <li><a href="?category={{category.id}}">{{category.name}}</a></li>
+                      {% endfor %}
                     </ul>
                   </div>
                 </div>
               </div>
+
+                <div class="col-lg-9 stretch-card grid-margin">
+                  <div class="card">
+                  <div class="card-body">
+                    {% for home in homes %}
+
+                  <div class="row">
+                    <div class="col-sm-4 grid-margin">
+                          <div class="rotate-img">
+                            <img
+                              src="{{home.image.url}}"
+                              alt="banner"
+                              class="img-fluid"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-sm-8 grid-margin">
+                          <h2 class="font-weight-600 mb-2">
+                            {{home.category}}
+                          </h2>
+                          <p class="fs-13 text-muted mb-0">
+                            <span class="mr-2">Photo </span>10 Minutes ago
+                          </p>
+                          <p class="fs-15">
+                            {{home.description}}
+                          </p>
+                        </div>
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+      <!-- next session News Video's-->
+       <div class="row" data-aos="fade-up">
               <div class="col-lg-9 stretch-card grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-4 grid-margin">
-                        <div class="position-relative">
-                          <div class="rotate-img">
-                            <img
-                              src="{% static 'assets/images/dashboard/home_4.jpg' %}"
-                              alt="thumb"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <div class="badge-positioned">
-                            <span class="badge badge-danger font-weight-bold"
-                              >Flash news</span
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-8  grid-margin">
-                        <h2 class="mb-2 font-weight-600">
-                          South Korea’s Moon Jae-in sworn in vowing to address
-                          North
-                        </h2>
-                        <div class="fs-13 mb-2">
-                          <span class="mr-2">Photo </span>10 Minutes ago
-                        </div>
-                        <p class="mb-0">
-                          Lorem Ipsum has been the industry's standard dummy
-                          text ever since the 1500s, when an
-                        </p>
-                      </div>
-                    </div>
+                    <h5 class="card-title">News Video's</h5>
+                            {% for i in obj %}
+                            {% video i.video 'small'%}
+                                  {% endfor %}
 
-                    <div class="row">
-                      <div class="col-sm-4 grid-margin">
-                        <div class="position-relative">
-                          <div class="rotate-img">
-                            <img
-                              src="{% static 'assets/images/dashboard/home_5.jpg' %}"
-                              alt="thumb"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <div class="badge-positioned">
-                            <span class="badge badge-danger font-weight-bold"
-                              >Flash news</span
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-8  grid-margin">
-                        <h2 class="mb-2 font-weight-600">
-                          No charges over 2017 Conservative battle bus cases
-                        </h2>
-                        <div class="fs-13 mb-2">
-                          <span class="mr-2">Photo </span>10 Minutes ago
-                        </div>
-                        <p class="mb-0">
-                          Lorem Ipsum has been the industry's standard dummy
-                          text ever since the 1500s, when an
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <div class="position-relative">
-                          <div class="rotate-img">
-                            <img
-                              src="{% static 'assets/images/dashboard/home_6.jpg' %}"
-                              alt="thumb"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <div class="badge-positioned">
-                            <span class="badge badge-danger font-weight-bold"
-                              >Flash news</span
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-8">
-                        <h2 class="mb-2 font-weight-600">
-                          Kaine: Trump Jr. may have committed treason
-                        </h2>
-                        <div class="fs-13 mb-2">
-                          <span class="mr-2">Photo </span>10 Minutes ago
-                        </div>
-                        <p class="mb-0">
-                          Lorem Ipsum has been the industry's standard dummy
-                          text ever since the 1500s, when an
-                        </p>
-                      </div>
-                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="row" data-aos="fade-up">
-              <div class="col-sm-12 grid-margin">
+                     </div>
+                   </div>
+
+
+<div class="col-lg-3 stretch-card grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <div class="row">
-                      <div class="col-lg-8">
-                        <div class="card-title">
-                          Video
-                        </div>
-                        <div class="row">
-                          <div class="col-sm-6 grid-margin">
-                            <div class="position-relative">
-                              <div class="rotate-img">
-                                <img
-                                  src="{% static 'assets/images/dashboard/home_7.jpg' %}"
-                                  alt="thumb"
-                                  class="img-fluid"
-                                />
-                              </div>
-                              <div class="badge-positioned w-90">
-                                <div
-                                  class="d-flex justify-content-between align-items-center"
-                                >
-                                  <span
-                                    class="badge badge-danger font-weight-bold"
-                                    >Lifestyle</span
-                                  >
-                                  <div class="video-icon">
-                                    <i class="mdi mdi-play"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-6 grid-margin">
-                            <div class="position-relative">
-                              <div class="rotate-img">
-                                <img
-                                  src="{% static 'assets/images/dashboard/home_8.jpg' %}"
-                                  alt="thumb"
-                                  class="img-fluid"
-                                />
-                              </div>
-                              <div class="badge-positioned w-90">
-                                <div
-                                  class="d-flex justify-content-between align-items-center"
-                                >
-                                  <span
-                                    class="badge badge-danger font-weight-bold"
-                                    >National News</span
-                                  >
-                                  <div class="video-icon">
-                                    <i class="mdi mdi-play"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-sm-6 grid-margin">
-                            <div class="position-relative">
-                              <div class="rotate-img">
-                                <img
-                                  src="{% static 'assets/images/dashboard/home_9.jpg' %}"
-                                  alt="thumb"
-                                  class="img-fluid"
-                                />
-                              </div>
-                              <div class="badge-positioned w-90">
-                                <div
-                                  class="d-flex justify-content-between align-items-center"
-                                >
-                                  <span
-                                    class="badge badge-danger font-weight-bold"
-                                    >Lifestyle</span
-                                  >
-                                  <div class="video-icon">
-                                    <i class="mdi mdi-play"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-6 grid-margin">
-                            <div class="position-relative">
-                              <div class="rotate-img">
-                                <img
-                                  src="{% static 'assets/images/dashboard/home_10.jpg' %}"
-                                  alt="thumb"
-                                  class="img-fluid"
-                                />
-                              </div>
-                              <div class="badge-positioned w-90">
-                                <div
-                                  class="d-flex justify-content-between align-items-center"
-                                >
-                                  <span
-                                    class="badge badge-danger font-weight-bold"
-                                    >National News</span
-                                  >
-                                  <div class="video-icon">
-                                    <i class="mdi mdi-play"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div
-                          class="d-flex justify-content-between align-items-center"
-                        >
-                          <div class="card-title">
-                            Latest Video
-                          </div>
-                          <p class="mb-3">See all</p>
-                        </div>
-                        <div
-                          class="d-flex justify-content-between align-items-center border-bottom pb-2"
-                        >
-                          <div class="div-w-80 mr-3">
-                            <div class="rotate-img">
-                              <img
-                                src="{% static 'assets/images/dashboard/home_11.jpg' %}"
-                                alt="thumb"
-                                class="img-fluid"
-                              />
-                            </div>
-                          </div>
-                          <h3 class="font-weight-600 mb-0">
-                            Apple Introduces Apple Watch
-                          </h3>
-                        </div>
-                        <div
-                          class="d-flex justify-content-between align-items-center border-bottom pt-3 pb-2"
-                        >
-                          <div class="div-w-80 mr-3">
-                            <div class="rotate-img">
-                              <img
-                                src="{% static 'assets/images/dashboard/home_12.jpg' %}"
-                                alt="thumb"
-                                class="img-fluid"
-                              />
-                            </div>
-                          </div>
-                          <h3 class="font-weight-600 mb-0">
-                            SEO Strategy & Google Search
-                          </h3>
-                        </div>
-                        <div
-                          class="d-flex justify-content-between align-items-center border-bottom pt-3 pb-2"
-                        >
-                          <div class="div-w-80 mr-3">
-                            <div class="rotate-img">
-                              <img
-                                src="{% static 'assets/images/dashboard/home_13.jpg' %}"
-                                alt="thumb"
-                                class="img-fluid"
-                              />
-                            </div>
-                          </div>
-                          <h3 class="font-weight-600 mb-0">
-                            Cycling benefit & disadvantag
-                          </h3>
-                        </div>
-                        <div
-                          class="d-flex justify-content-between align-items-center border-bottom pt-3 pb-2"
-                        >
-                          <div class="div-w-80 mr-3">
-                            <div class="rotate-img">
-                              <img
-                                src="{% static 'assets/images/dashboard/home_14.jpg' %}"
-                                alt="thumb"
-                                class="img-fluid"
-                              />
-                            </div>
-                          </div>
-                          <h3 class="font-weight-600">
-                            The Major Health Benefits of
-                          </h3>
-                        </div>
-                        <div
-                          class="d-flex justify-content-between align-items-center pt-3"
-                        >
-                          <div class="div-w-80 mr-3">
-                            <div class="rotate-img">
-                              <img
-                                src="{% static 'assets/images/dashboard/home_15.jpg' %}"
-                                alt="thumb"
-                                class="img-fluid"
-                              />
-                            </div>
-                          </div>
-                          <h3 class="font-weight-600 mb-0">
-                            Powerful Moments of Peace
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
+                    <h2>Video Category</h2>
+                    <ul class="vertical-menu">
+                      <li><a href="/test">All News</a></li>
+                    {% for videocategory in videocategories %}
+                    <ul class="vertical-menu">
+                      <li><a href="?videocategory={{videocategory.id}}">{{videocategory.name}}</a></li>
+                      {% endfor %}
+                    </ul>
                   </div>
                 </div>
               </div>
-            </div>
+       </div>
+
+
+
+
             <div class="row" data-aos="fade-up">
               <div class="col-sm-12">
                 <div class="card">
@@ -835,7 +692,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-sm-5">
-                  <img src="{% static 'assets/images/logo.svg' %}" class="footer-logo" alt="" />
+                  <img src="{% static 'assets/images/bangara.jpeg' %}" class="footer-logo" alt="" />
                   <h5 class="font-weight-normal mt-4 mb-5">
                     Newspaper is your news, entertainment, music fashion website. We
                     provide you with the latest breaking news and videos straight from
@@ -859,50 +716,38 @@
                     </li>
                   </ul>
                 </div>
+                        <!-- partial:partials/_footer.html
+
                 <div class="col-sm-4">
                   <h3 class="font-weight-bold mb-3">RECENT POSTS</h3>
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="footer-border-bottom pb-2">
                         <div class="row">
+                                              {% for home in homes %}
                           <div class="col-3">
                             <img
-                              src="{% static 'assets/images/dashboard/home_1.jpg' %}"
+                              src="{{home.image.url}}"
                               alt="thumb"
                               class="img-fluid"
                             />
                           </div>
                           <div class="col-9">
                             <h5 class="font-weight-600">
-                              Cotton import from USA to soar was American traders
-                              predict
+                                                          {{home.description}}
+
                             </h5>
                           </div>
+                                                {% endfor %}
+
                         </div>
+
                       </div>
+
                     </div>
+
                   </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="footer-border-bottom pb-2 pt-2">
-                        <div class="row">
-                          <div class="col-3">
-                            <img
-                              src="{% static 'assets/images/dashboard/home_2.jpg' %}"
-                              alt="thumb"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <div class="col-9">
-                            <h5 class="font-weight-600">
-                              Cotton import from USA to soar was American traders
-                              predict
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
                   <div class="row">
                     <div class="col-sm-12">
                       <div>
@@ -925,6 +770,7 @@
                     </div>
                   </div>
                 </div>
+                 -->
                 <div class="col-sm-3">
                   <h3 class="font-weight-bold mb-3">CATEGORIES</h3>
                   <div class="footer-border-bottom pb-2">
@@ -967,10 +813,10 @@
                 <div class="col-sm-12">
                   <div class="d-sm-flex justify-content-between align-items-center">
                     <div class="fs-14 font-weight-600">
-                      © 2020 @ <a href="{% static 'https://www.bootstrapdash.com/' %}" target="_blank" class="text-white"> BootstrapDash</a>. All rights reserved.
+                      © 2020 @ <a href="{% static 'https://www.bangarajagatu.com/' %}" target="_blank" class="text-white"> Bangara Jagatu</a>. All rights reserved.
                     </div>
                     <div class="fs-14 font-weight-600">
-                      Handcrafted by <a href="{% static 'https://www.bootstrapdash.com/' %}" target="_blank" class="text-white">BootstrapDash</a>
+                      D&D by <a href="{% static 'https://www.mdcoreone.com/' %}" target="_blank" class="text-white">Mdcoreone.com</a>
                     </div>
                   </div>
                 </div>
