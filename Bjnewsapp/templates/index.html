@@ -9,8 +9,9 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Bangara Jagatu News</title>
     <!-- plugin css for this page -->
     <link
@@ -25,43 +26,46 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <!-- endinject -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   </head>
 
   <body>
     <div class="container-scroller">
       <div class="main-panel">
         <!-- partial:partials/_navbar.html -->
-        <header id="header">
+<header id="header">
           <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
               <div class="navbar-top">
                 <div class="d-flex justify-content-between align-items-center">
                   <ul class="navbar-top-left-menu">
                     <li class="nav-item">
-                      <a href="{% static 'pages/index-inner.html' %}" class="nav-link">Advertise</a>
+                      <a href="pages/index-inner.html" class="nav-link">Advertise</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static 'pages/aboutus.html' %}" class="nav-link">About</a>
+                      <a href="/aboutus" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link">Events</a>
+                      <a href="#" class="nav-link">Events</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link">Write for Us</a>
+                      <a href="#" class="nav-link">Write for Us</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link">In the Press</a>
+                      <a href="#" class="nav-link">In the Press</a>
                     </li>
                   </ul>
                   <ul class="navbar-top-right-menu">
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link"><i class="mdi mdi-magnify"></i></a>
+                      <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link">Login</a>
+                      <a href="#" class="nav-link">Login</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link">Sign in</a>
+                      <a href="#" class="nav-link">Sign in</a>
                     </li>
                   </ul>
                 </div>
@@ -72,6 +76,7 @@
                     <a class="navbar-brand" href="https://www.bangaragatu.com"
                        <a class="navbar-brand" href="#"
                       ><img src="{% static '/assets/images/bangara.jpeg' %}" alt=""
+                    /></a>
                     /></a>
                   </div>
                   <div>
@@ -98,25 +103,24 @@
                           </button>
                         </li>
                         <li class="nav-item active">
-                          <a class="nav-link" href="/">Home</a>
+                          <a class="nav-link" href="index.html">News Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="/magazine">MAGAZINE[Times]</a>
+                          <a class="nav-link" href="/magazine">Politics</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="/business">Business[BBC]</a>
+                          <a class="nav-link" href="/business">Trends</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="/sports">Sports[Google]</a>
+                          <a class="nav-link" href="/sports">Sports</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="/art">Art</a>
-                        </li>
+                          <a class="nav-link" href="/travel">Religion</a>
                         <li class="nav-item">
-                          <a class="nav-link" href="/politics">POLITICS</a>
+                          <a class="nav-link" href="/business">Entrepreneurs</a>
                         </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/travel">Travel</a>
+                         <li class="nav-item">
+                          <a class="nav-link" href="/travel">Health</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="/contactus">Contact</a>
@@ -126,17 +130,17 @@
                   </div>
                   <ul class="social-media">
                     <li>
-                      <a href="{% static '#' %}">
+                      <a href="#">
                         <i class="mdi mdi-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="{% static '#' %}">
+                      <a href="#">
                         <i class="mdi mdi-youtube"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="{% static '#' %}">
+                      <a href="#">
                         <i class="mdi mdi-twitter"></i>
                       </a>
                     </li>
@@ -161,7 +165,7 @@
           color: #fff;
           position: relative;
           top: 0%;
-          left:39%;
+          left:42%;
           transform: translate(-46%,-4%);
           background: #3920b9;
           padding: 0 0px;
@@ -217,13 +221,9 @@
                   {% endfor %}
               </div>
                 </div>
-              <div class="d-flex">
-                <span class="mr-3 text-danger">Wed, March 4, 2020</span>
-                <span class="text-danger">30°C,London</span>
               </div>
             </div>
           </div>
-        </div>
      <div class="content-wrapper">
 
 
@@ -341,6 +341,7 @@ function showSlides() {
               </div>
             </div>
                             </div>
+
 
 
 
@@ -682,7 +683,7 @@ function showSlides() {
               </div>
             </div>
           </div>
-        </div>
+
         <!-- main-panel ends -->
         <!-- container-scroller ends -->
 
@@ -716,6 +717,9 @@ function showSlides() {
                     </li>
                   </ul>
                 </div>
+                </div>
+              </div>
+            </div>
                         <!-- partial:partials/_footer.html
 
                 <div class="col-sm-4">
@@ -770,7 +774,6 @@ function showSlides() {
                     </div>
                   </div>
                 </div>
-                 -->
                 <div class="col-sm-3">
                   <h3 class="font-weight-bold mb-3">CATEGORIES</h3>
                   <div class="footer-border-bottom pb-2">
@@ -826,8 +829,6 @@ function showSlides() {
         </footer>
 
         <!-- partial -->
-      </div>
-    </div>
     <!-- inject:js -->
     <script src="{% static 'assets/vendors/js/vendor.bundle.base.js' %}"></script>
     <!-- endinject -->

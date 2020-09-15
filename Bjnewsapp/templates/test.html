@@ -9,8 +9,9 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Bangara Jagatu News</title>
     <!-- plugin css for this page -->
     <link
@@ -25,43 +26,46 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <!-- endinject -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   </head>
 
   <body>
     <div class="container-scroller">
       <div class="main-panel">
         <!-- partial:partials/_navbar.html -->
-        <header id="header">
+<header id="header">
           <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
               <div class="navbar-top">
                 <div class="d-flex justify-content-between align-items-center">
                   <ul class="navbar-top-left-menu">
                     <li class="nav-item">
-                      <a href="{% static 'pages/index-inner.html' %}" class="nav-link">Advertise</a>
+                      <a href="pages/index-inner.html" class="nav-link">Advertise</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static 'pages/aboutus.html' %}" class="nav-link">About</a>
+                      <a href="pages/aboutus.html" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link">Events</a>
+                      <a href="#" class="nav-link">Events</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link">Write for Us</a>
+                      <a href="#" class="nav-link">Write for Us</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link">In the Press</a>
+                      <a href="#" class="nav-link">In the Press</a>
                     </li>
                   </ul>
                   <ul class="navbar-top-right-menu">
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link"><i class="mdi mdi-magnify"></i></a>
+                      <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link">Login</a>
+                      <a href="#" class="nav-link">Login</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% static '#' %}" class="nav-link">Sign in</a>
+                      <a href="#" class="nav-link">Sign in</a>
                     </li>
                   </ul>
                 </div>
@@ -69,11 +73,11 @@
               <div class="navbar-bottom">
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a class="navbar-brand" href="{% static '#' %}"
-                       <p><font size="3" face="Times New Roman" color="red">
-                          <a class="nav-link "  href="/">BANGARA JAGATU NEWS</a>
-                         </font>
-                       </p>
+                    <a class="navbar-brand" href="https://www.bangaragatu.com"
+                       <a class="navbar-brand" href="#"
+                      ><img src="{% static '/assets/images/bangara.jpeg' %}" alt=""
+                    /></a>
+                    /></a>
                   </div>
                   <div>
                     <button
@@ -99,31 +103,24 @@
                           </button>
                         </li>
                         <li class="nav-item active">
-                          <a class="nav-link" href="/">Home</a>
+                          <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#read-news">Read News</a>
+                          <a class="nav-link" href="/magazine">Politics</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/business">Trends</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/sports">Sports</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/travel">Religion</a>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/business">Entrepreneurs</a>
                         </li>
                          <li class="nav-item">
-                          <a class="nav-link" href="#watch-news">News Video's</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/magazine">MAGAZINE[Times]</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/business">Business[BBC]</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/sports">Sports[Google]</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/art">Art</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/politics">POLITICS</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/travel">Travel</a>
+                          <a class="nav-link" href="/travel">Health</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="/contactus">Contact</a>
@@ -133,17 +130,17 @@
                   </div>
                   <ul class="social-media">
                     <li>
-                      <a href="{% static '#' %}">
+                      <a href="#">
                         <i class="mdi mdi-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="{% static '#' %}">
+                      <a href="#">
                         <i class="mdi mdi-youtube"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="{% static '#' %}">
+                      <a href="#">
                         <i class="mdi mdi-twitter"></i>
                       </a>
                     </li>
@@ -168,7 +165,7 @@
           color: #fff;
           position: relative;
           top: 0%;
-          left:39%;
+          left:42%;
           transform: translate(-46%,-4%);
           background: #3920b9;
           padding: 0 0px;
@@ -224,13 +221,9 @@
                   {% endfor %}
               </div>
                 </div>
-              <div class="d-flex">
-                <span class="mr-3 text-danger">Wed, March 4, 2020</span>
-                <span class="text-danger">30°C,London</span>
               </div>
             </div>
           </div>
-        </div>
      <div class="content-wrapper">
 
 
@@ -291,7 +284,7 @@ function showSlides() {
                     <h2>Latest news</h2>
 
                     <div
-                      class="d-flex border-bottom-blue pt-3 pb-3 align-items-center justify-content-between"
+                      class="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between"
                     >
                       <div class="pr-3">
                         <h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
@@ -352,19 +345,20 @@ function showSlides() {
 
 
 
+
 </body>
 
 
 </html>
 
-    <section id="read-news" class=" section-bg">
+
        <div class="row" data-aos="fade-up">
               <div class="col-lg-3 stretch-card grid-margin">
                 <div class="card">
                   <div class="card-body">
                     <h2>Category</h2>
                     <ul class="vertical-menu">
-                      <li><a href="/test">All News  <section id="read news" class=" section-bg"></a></li>
+                      <li><a href="/test">All News</a></li>
                     {% for category in categories %}
                     <ul class="vertical-menu">
                       <li><a href="?category={{category.id}}">{{category.name}}</a></li>
@@ -406,11 +400,9 @@ function showSlides() {
                   </div>
                 </div>
               </div>
-            
+
 
       <!-- next session News Video's-->
-    <section id="watch-news" class=" section-bg">
-
        <div class="row" data-aos="fade-up">
               <div class="col-lg-9 stretch-card grid-margin">
                 <div class="card">
@@ -691,7 +683,7 @@ function showSlides() {
               </div>
             </div>
           </div>
-        </div>
+
         <!-- main-panel ends -->
         <!-- container-scroller ends -->
 
@@ -701,7 +693,7 @@ function showSlides() {
             <div class="container">
               <div class="row">
                 <div class="col-sm-5">
-                  <img src="{% static 'assets/images/logo.svg' %}" class="footer-logo" alt="" />
+                  <img src="{% static 'assets/images/bangara.jpeg' %}" class="footer-logo" alt="" />
                   <h5 class="font-weight-normal mt-4 mb-5">
                     Newspaper is your news, entertainment, music fashion website. We
                     provide you with the latest breaking news and videos straight from
@@ -725,50 +717,41 @@ function showSlides() {
                     </li>
                   </ul>
                 </div>
+                </div>
+              </div>
+            </div>
+                        <!-- partial:partials/_footer.html
+
                 <div class="col-sm-4">
                   <h3 class="font-weight-bold mb-3">RECENT POSTS</h3>
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="footer-border-bottom pb-2">
                         <div class="row">
+                                              {% for home in homes %}
                           <div class="col-3">
                             <img
-                              src="{% static 'assets/images/dashboard/home_1.jpg' %}"
+                              src="{{home.image.url}}"
                               alt="thumb"
                               class="img-fluid"
                             />
                           </div>
                           <div class="col-9">
                             <h5 class="font-weight-600">
-                              Cotton import from USA to soar was American traders
-                              predict
+                                                          {{home.description}}
+
                             </h5>
                           </div>
+                                                {% endfor %}
+
                         </div>
+
                       </div>
+
                     </div>
+
                   </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="footer-border-bottom pb-2 pt-2">
-                        <div class="row">
-                          <div class="col-3">
-                            <img
-                              src="{% static 'assets/images/dashboard/home_2.jpg' %}"
-                              alt="thumb"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <div class="col-9">
-                            <h5 class="font-weight-600">
-                              Cotton import from USA to soar was American traders
-                              predict
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
                   <div class="row">
                     <div class="col-sm-12">
                       <div>
@@ -833,10 +816,10 @@ function showSlides() {
                 <div class="col-sm-12">
                   <div class="d-sm-flex justify-content-between align-items-center">
                     <div class="fs-14 font-weight-600">
-                      © 2020 @ <a href="{% static 'https://www.bootstrapdash.com/' %}" target="_blank" class="text-white"> BootstrapDash</a>. All rights reserved.
+                      © 2020 @ <a href="{% static 'https://www.bangarajagatu.com/' %}" target="_blank" class="text-white"> Bangara Jagatu</a>. All rights reserved.
                     </div>
                     <div class="fs-14 font-weight-600">
-                      Handcrafted by <a href="{% static 'https://www.bootstrapdash.com/' %}" target="_blank" class="text-white">BootstrapDash</a>
+                      D&D by <a href="{% static 'https://www.mdcoreone.com/' %}" target="_blank" class="text-white">Mdcoreone.com</a>
                     </div>
                   </div>
                 </div>
@@ -846,8 +829,6 @@ function showSlides() {
         </footer>
 
         <!-- partial -->
-      </div>
-    </div>
     <!-- inject:js -->
     <script src="{% static 'assets/vendors/js/vendor.bundle.base.js' %}"></script>
     <!-- endinject -->
